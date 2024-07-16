@@ -42,7 +42,7 @@ h1, .balance, .summary, form{
 }
 
 .summary{
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 }
 .summary{
     display: flex;
@@ -50,6 +50,10 @@ h1, .balance, .summary, form{
     justify-content: center;
     align-items: center;
     gap: 10vw;
+}
+
+.radio-btns{
+    margin: 1rem;
 }
 
 .expense-tracker{
@@ -179,7 +183,7 @@ button:active {
 
 
 
-/* MEDIA QUERIES */
+/* =========================================== MEDIA QUERIES ============================================ */
 
 @media (min-width: 380px) and (max-width: 800px){
 
@@ -243,6 +247,10 @@ button:active {
         justify-content: center;
         align-items: center;
         gap: 15vw;
+    }
+
+    .radio-btns{
+        margin: 0.8rem;
     }
 
     .balance h2{

@@ -17,7 +17,7 @@ export const ExpenseTracker = () => {
     const navigate = useNavigate();
 
     const [description, setDescription] = useState("");
-    const [transactionAmount, setTransactionAmount] = useState(0);
+    const [transactionAmount, setTransactionAmount] = useState("");
     const [transactionType, setTransactionType] = useState("expense");
 
     const { balance, income, expenses } = transactionTotals;
@@ -71,17 +71,19 @@ export const ExpenseTracker = () => {
                 <input className="amt" type="number" placeholder="Amount" value={transactionAmount} required 
                     onChange={(e) => setTransactionAmount(e.target.value)}/>
 
-                <input type="radio" id="expense" value="expense" 
-                    onChange={(e) => setTransactionType(e.target.value)}
-                    checked={ transactionType === "expense" }
-                />
-                <label htmlFor="expense"> Expense </label>
+                <div className="radio-btns">
+                    <input type="radio" id="expense" value="expense" 
+                        onChange={(e) => setTransactionType(e.target.value)}
+                        checked={ transactionType === "expense" }
+                    />
+                    <label htmlFor="expense"> Expense </label>
 
-                <input type="radio" id="income" value="income" 
-                    onChange={(e) => setTransactionType(e.target.value)}
-                    checked={ transactionType === "income" }
-                />
-                <label htmlFor="income"> Income </label>
+                    <input type="radio" id="income" value="income" 
+                        onChange={(e) => setTransactionType(e.target.value)}
+                        checked={ transactionType === "income" }
+                    />
+                    <label htmlFor="income"> Income </label>
+                </div>
 
                 <button className="add-transaction-btn" type="submit"> Add Transaction </button>
             </form>
